@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krona+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krona+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  height: 55px;
+  width: 155px;
+  object-fit: cover;
+  object-position: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.left-section {
+  padding: 0;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 32px;
+  padding: 0;
+}
+
+.nav-list-list {
+  display: flex;
+  justify-content: space-evenly;
+  height: 71px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list, div {
+  padding: 0px 40px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.last-div {
+  padding: 0;
+  margin-right: 32px;
+}
+
+.right-section {
+  height: 71px;
+  padding: 0;
+}
+
+.Sign {
+  border-radius: 4px;
+  border: solid;
+  padding: 7px 12px;
+  font-family: rubik;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'rubik', sans-serif;
+  text-wrap: nowrap;
+  height: 40px;
+  background-color: white;
+  white-space: nowrap;
+  color: rgb(17, 94, 138);
+  transition: background-color 0.15s;
+  cursor: pointer;
+}
+
+.Sign:hover {
+  background-color: rgb(216, 240, 255);
+}
+
+.Sign:active {
+  background-color: rgb(184, 228, 255);
+}
+
+.get {
+  margin-left: 24px;
+  margin-right: 8px;
+  height: 40px;
+  background-color: rgb(17, 94, 138);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 12px;
+  white-space: nowrap;
+  transition: opacity 0.15s, background-color 0.15s;
+  cursor: pointer;
+}
+
+.get:hover {
+  opacity: 0.6;
+}
+
+.get:active {
+  background-color: rgb(0, 20, 31);
+}
+
+/* New styles for mobile view */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  background-color: rgb(17, 94, 138);
+  height: 4px;
+  width: 30px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.mobile-nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 1000px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mobile-nav-menu div, .mobile-nav-menu button {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Media Query for 1000px screen width */
+@media (max-width: 1108px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-list {
+    display: none; /* Hide the desktop navigation */
+  }
+  .hamburger-menu {
+    display: flex; /* Show the hamburger menu */
+  }
+  .mobile-nav-menu {
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(12px);
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .mobile-nav-menu.show {
+    display: flex;
+    height: 500px;
+    backdrop-filter: blur(12px);
+    opacity: 1;
+    top: 100%;
+  }
+}
+
+@media (min-width: 1108px) {
+  .mobile-nav-menu {
+    display: none; /* Hide the mobile navigation menu initially */
+  }
+  .hamburger-menu {
+    display: none; /* Hide the hamburger menu initially */
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+/* Add transition for the mobile nav menu */
+.mobile-nav-menu {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-menu:active {
+  opacity: 1;
+}
+
+.mobile-nav-menu.show {
+  height: 500px;
+  backdrop-filter: blur(12px);
+  opacity: 1;
+  top: 100%;
+}
+
+.mobile-nav-menu div a:hover {
+  color: rgb(17, 94, 138);
+  cursor: pointer;
+}
+
+.mobile-nav-menu div a:active {
+  color: rgb(6, 53, 80);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mbutton {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* First section */
+.first-section {
+  flex: 1; /* This allows the section to take the remaining height */
+  overflow-y: auto;
+  padding-top: 72px; /* Space for the fixed header */
+}
+
+.hero-background-image {
+  position: relative;
+  background-image: url('cv-back.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero-container {
+  position: absolute;
+  display: block;
+  margin-left: 82.5px;
+  margin-right: 82.5px;
+  padding-left:  16px;
+  padding-right: 16px;
+  z-index: 1; /* Ensure content is above the background image */
+}
+
+.hero-container > * {
+  display: block;
+}
+
+.hero-container h1 {
+  font-family: "Krona One";
+  font-size: 37px;
+  text-wrap: wrap;
+  text-align: left;
+  line-height: 60px;
+  padding: 31px 0;
+  width: 700px;
+
+}
+
+.hero-text span {
+  background-attachment: scroll;
+  background-clip: text;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(90deg, rgb(96, 76, 199), rgb(243, 123, 32));
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+/*first section button*/
+.section-button{
+  height: 50px;
+}
+
+.one{
+  background-color: rgb(17, 94, 138);
+  color: white;
+  font-family: 'rubik', sans-serif;
+  font-weight: 600;
+  padding: 13px 16px 13px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+.one:hover{
+  background-color: rgba(10, 60, 90, 1);
+}
+.one:active{
+  opacity: 0.6;
+}
+.two{
+  background-color: rgb(243, 123, 32);
+  color: white;
+  font-family: 'rubik', sans-serif;
+  font-weight: 600;
+  margin-left: 14px;
+  padding: 13px 14px 13px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.two:hover{
+  background-color: rgba(190, 90, 10, 1);
+}
+
+.two:active{
+  opacity: 0.6;
+}
+
+/*interview-by sections*/
+.love{
+  font-family: 'koulen', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  text-transform: none;
+  color: rgb(66, 66, 66);
+  margin-bottom: 16px;
+  padding: 20px 0 16px;
+}
+.companies{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 36px;
+  /*width: 672px;*/
+}
+.companies div{
+  padding: 0;
+}
+.linkedin{
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 10px;
+  width: 130px;
+  padding-right: -30px;
+}
+
+.amazon {
+  object-fit: contain;
+  object-position: center;
+  margin-top: 16px;
+  margin-right: 15px;
+  width: 120px;
+}
+
+.instagram{
+  object-fit: contain;
+  object-position: center;
+  width: 120px;
+  padding-top: 8px;
+  margin-right: 15px;
+}
+
+.facebook {
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 4px;
+  width: 120px;
+}
